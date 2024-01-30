@@ -1,5 +1,5 @@
 .domainbody {
-    background-image: url(../../assets/Domainimages/domainsbackground.png);
+    background-image: url("/domains/domainsbackground.png");
     background-size: cover;
 }
 .container {

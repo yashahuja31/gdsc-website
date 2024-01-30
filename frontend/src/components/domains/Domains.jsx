@@ -1,10 +1,4 @@
 import "./Domains.css";
-import AIMLimg from "../../assets/Domainimages/AIML.png";
-import CyberSecurityimg from "../../assets/Domainimages/CyberSecurity.png";
-import GraphicsandVEimg from "../../assets/Domainimages/GraphicsandVE.png";
-import Marketingimg from "../../assets/Domainimages/Marketing.png";
-import TechContentimg from "../../assets/Domainimages/TechContent.png";
-import TechDevimg from "../../assets/Domainimages/TechDev.png";
 
 export default function Domains() {
     return (
@@ -14,7 +8,7 @@ export default function Domains() {
                 <div className="card">
                     <img
                         className="card-img-top"
-                        src={GraphicsandVEimg}
+                        src={"/domains/GraphicsandVE.png"}
                         alt="Card image cap"
                     />
                     <div className="card-body">
@@ -28,7 +22,7 @@ export default function Domains() {
                 <div className="card">
                     <img
                         className="card-img-top"
-                        src={TechContentimg}
+                        src={"/domains/TechContent.png"}
                         alt="Card image cap"
                     />
                     <div className="card-body">
@@ -42,7 +36,7 @@ export default function Domains() {
                 <div className="card">
                     <img
                         className="card-img-top"
-                        src={Marketingimg}
+                        src={"/domains/Marketing.png"}
                         alt="Card image cap"
                     />
                     <div className="card-body">
@@ -54,7 +48,7 @@ export default function Domains() {
                     </div>
                 </div>
                 <div className="card">
-                    <img className="card-img-top" src={TechDevimg} alt="Card image cap" />
+                    <img className="card-img-top" src={"/domains/TechDev.png"} alt="Card image cap" />
                     <div className="card-body">
                         <h2 className="card-heading">Tech Dev</h2>
                         <p className="card-text">
@@ -64,7 +58,7 @@ export default function Domains() {
                     </div>
                 </div>
                 <div className="card">
-                    <img className="card-img-top" src={AIMLimg} alt="Card image cap" />
+                    <img className="card-img-top" src={"/domains/AIML.png"} alt="Card image cap" />
                     <div className="card-body">
                         <h2 className="card-heading">AI & ML</h2>
                         <p className="card-text">
@@ -76,7 +70,7 @@ export default function Domains() {
                 <div className="card">
                     <img
                         className="card-img-top"
-                        src={CyberSecurityimg}
+                        src={"/domains/CyberSecurity.png"}
                         alt="Card image cap"
                     />
                     <div className="card-body">
