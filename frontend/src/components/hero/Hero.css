@@ -1,0 +1,71 @@
+.heroContainer {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 4rem;
+    justify-content: center;
+}
+
+.heroBackground {
+    position: relative;
+    overflow: hidden;
+}
+
+.heroBackground:before {
+    content: "";
+    position: absolute;
+    height: 400%;
+    width: 400%;
+    z-index: -1;
+    background: url("/hero/background.png") repeat fixed;
+    transform: translate(-50%, -50%) rotate(10deg);
+}
+
+.heroBackground p {
+    margin: 2rem 15rem;
+    text-align: center;
+    color: #a2a2a2;
+}
+
+.heroSubContainer {
+    display: flex;
+}
+
+.heroTitleContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.heroTitleContainer h1 {
+    color: #BBBBBB;
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.3;
+    font-size: 3.5rem;
+}
+
+.heroTitleContainer h1:nth-child(1) span{
+    color: var(--color-red);
+}
+.heroTitleContainer h1:nth-child(2) span{
+    color: var(--color-green);
+}
+.heroTitleContainer h1:nth-child(3) span{
+    color: var(--color-blue);
+}
+.heroTitleContainer h1:nth-child(4) span{
+    color: var(--color-yellow);
+}
+
+.heroTitleContainer h1:last-child {
+    color: #5696C0;
+}
+
+.heroImageContainer {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
