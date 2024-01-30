@@ -31,6 +31,7 @@
     transition: transform 0.3s ease-in-out;
     width: 240px;
     cursor: pointer;
+    background-color: white;
 }
 .team-card-img-1{
     background-color: #dc4d42;
