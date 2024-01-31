@@ -1,6 +1,7 @@
 .hero {
   background-image: url(/hero/background.png);
   position: relative;
+  overflow-y: hidden;
 }
 .svg1{
   z-index: -5;
