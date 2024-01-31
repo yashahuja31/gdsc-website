@@ -42,6 +42,7 @@ export default function Footer() {
                 <a href="" className="tags">EVENTS</a>
                 <a href="" className="tags">JOINCLUB</a>
                 <a href="" className="tags">GALLERY</a>
+                <a href="" className="tags">CONTRIBUTORS</a>
             </div>
         </footer>
     );
