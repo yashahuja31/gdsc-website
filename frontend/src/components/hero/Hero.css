@@ -5,6 +5,8 @@
     flex-direction: row;
     padding: 2rem 4rem;
     justify-content: center;
+    padding-top: 5rem;
+    min-height: 80vh;
 }
 
 .heroBackground {
@@ -63,9 +65,60 @@
 }
 
 .heroImageContainer {
+    display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    vertical-align: middle;
+}
+.heroImageContainer {
+    height: inherit;
 }
 
+.heroProps {
+    position: absolute;
+    z-index: 5;
+}
+
+.heroProps1 {
+    top: -40px;
+    left: -20px;
+    transform: rotate(-6deg);
+
+}
+
+.heroProps2 {
+    top: -40px;
+    right: -30px;
+}
+
+.heroProps3 {
+    left: 100px;
+    top: 300px;
+}
+
+.heroProps4 {
+    right: 400px;
+    top: 50px;
+}
+
+.heroProps5 {
+    position: absolute;
+    width: 180px;
+    height: 100px;
+    left: -160px;
+    top: 70%;
+
+    background: #FABD03;
+    transform: rotate(23deg);
+}
+
+.heroProps6 {
+    box-sizing: border-box;
+    width: 180px;
+    height: 160px;
+    left: -140px;
+    top: 67.5%;
+
+    border: 5px solid #B9B9B9;
+    transform: rotate(23deg);
+
+}
