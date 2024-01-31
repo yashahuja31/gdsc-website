@@ -4,9 +4,9 @@ export default function Header() {
   return (
     <nav className="full-width-nav">
       <div className="nav-items-container">
-        <div className="gsdc">
+        <div className="gdscContainer">
           <div className="logo">
-            <img src="/footer/gdsc.png" alt="" srcset="" />
+            <img src="/footer/gdsc.png" alt="gdsc"/>
           </div>
           <div className="club">
             <span className="club-name">google developer students club</span>
@@ -14,9 +14,9 @@ export default function Header() {
           </div>
         </div>
         <div className="nav-menu-links">
-          <a href="">home</a>
-          <a href="">events</a>
-          <a href="">team</a>
+          <a href="/">home</a>
+          <a href="/events">events</a>
+          <a href="/team">team</a>
         </div>
         <div className="button-container">
           <a href="#" className="btn">
