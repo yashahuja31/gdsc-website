@@ -1,84 +1,111 @@
-.full-width-nav {
-  width: 100%;
-  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
-  height: 11.5vh;
-  min-height: 75px;
-  padding: 0 2rem;
+nav {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: relative;
 }
 
-.nav-items-container {
+.nav-flex {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 5vw;
   display: flex;
-  height: 100%;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 
-.gdscContainer {
-  /* width: 34%; */
-  height: 100%;
+.nav-flex>div:nth-child(2) {
+  display: flex;
+  gap: 20px;
+  color: #486284;
+  align-items: center;
+  justify-content: center;
+}
+.nav-flex>div:nth-child(2)>a {
+  color: #486284;
+}
+
+.nav-flex>div>a>img {
+  max-height: 50px;
+  margin-right: 5px;
+}
+
+.nav-logo {
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: nowrap;
+  text-wrap: wrap;
 }
 
-.logo {
-  height: 100%;
+.nav-logo>span {
+  text-wrap: wrap;
 }
 
-.logo img {
-  height: inherit;
-  width: inherit;
-}
-
-
-.club {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  margin-left: 20px;
-}
-
-.club > span {
-  text-transform: uppercase;
-  font-size: 0.9rem;
-}
-
-.club-name {
-  font-weight: 500;
-  text-transform: capitalize !important;
-  font-size: 1rem !important;
-}
-
-.nav-menu-links {
-  display: flex;
-  gap: 3rem;
-}
-.nav-menu-links > a {
-  text-transform: capitalize;
+.nav-bt1 {
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: #486284 1px solid;
   text-decoration: none;
-  color: rgb(72, 98, 132);
-  font-size: 1rem;
-}
-.button-container {
-  display: flex;
-  gap: 1rem;
-}
-.button-container > .btn {
-  border: 1px solid;
-  border-radius: 30px;
-  padding: 0.375rem 1rem;
-  font-size: 1rem;
-  text-transform: capitalize;
-  color: rgb(72, 98, 132);
-  transition: all 150ms linear;
-  cursor: pointer;
+  color: #486284;
+  margin-right: 10px;
+  text-wrap: nowrap;
 }
 
-.btn:active,
-.btn:focus {
-  background-color: rgb(0, 158, 88);
-  color: #fff;
+.nav-bt2 {
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: #486284 1px solid;
+  background: #009e58;
+  color: white;
+  text-wrap: nowrap;
 }
+
+.bars {
+  color: black;
+  display: none;
+}
+
+.links {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .bars {
+    display: block;
+    position: relative;
+    z-index: 200;
+  }
+
+  .nav-flex>div:nth-child(2) {
+    position: fixed;
+    top: 0;
+    width: 70vw;
+    height: 100vh;
+    z-index: 100;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition-duration: 500ms;
+  }
+
+  .nav-flex>div:nth-child(3) {
+    display: none;
+  }
+  .bars{
+    display: inline-block;
+  }
+  .links {
+    display: inline-block;
+    color: #486284;
+  }
+}
+
+.nav-open {
+  right: -110%;
+}
+
+.nav-close {
+  right: 0;
+}
+
