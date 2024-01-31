@@ -4,6 +4,7 @@ import Events from "../components/events/Events.jsx";
 import FeedBack from "../components/feedback/FeedBack.jsx";
 import Domains from "../components/domains/Domains.jsx";
 import Hero from "../components/hero/Hero.jsx";
+import CloudComponent from "../components/cloudComponent/CloudComponent.jsx";
 
 export default function IndexPage() {
 
@@ -13,6 +14,7 @@ export default function IndexPage() {
             <Hero />
             <Domains />
             <FeedBack />
+            <CloudComponent />
             <Footer />
         </>
     );
