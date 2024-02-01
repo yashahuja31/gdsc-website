@@ -5,6 +5,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import IndexPage from "./pages/IndexPage.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import Events from "./components/events/Events.jsx";
+import Header from './components/header/Header.jsx';
 import { ParallaxProvider } from 'react-scroll-parallax';
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <Routes>
           <Route index element={<IndexPage/>} />
           <Route path={"/team"} element={<TeamPage/>} />
-          <Route path={"/events"} element={<Events />} />
+          <Route path={"/events"} element={<><Header /><Events/></>} />
       </Routes>
     </BrowserRouter>
     </ParallaxProvider>

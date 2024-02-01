@@ -1,0 +1,156 @@
+.root{
+    height: 100vh;
+    width: 100vw;
+}
+h1{
+    margin: 0;
+    font-size:5em;
+}
+.eventSection{
+    background: url(/events/background.png);
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* event info css starts */
+.eventInfo{
+    width: 60vw;
+    max-width: 1000px;
+    min-width: 700px;
+    /* height: min-content; */
+    display: grid;
+    align-items: center;
+    border-radius: 34px;
+    grid-template-areas: 
+    "a c c c"
+    "b c c c"
+    "b c c c";
+
+    padding: 20px;
+    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.47) inset;
+    background-color: white;
+    transition: all ease-in-out 300ms;
+}
+.eventInfo:hover{
+    scale: 1.05;
+}
+.eventInfo>div{
+    height: min-content;
+    max-width: 100%;   
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+}
+
+.eventInfo img {
+    max-width: 100%;
+}
+.eventLogo{
+    grid-area: a;
+}
+.eventName{
+    grid-area: b;
+}
+.eventImage{
+    grid-area: c;
+}
+
+/* event info css ends */
+
+/* event timeline css starts */
+.eventsTimeline{
+    height: min-content;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    width: 50vw;
+    /* height: 100px; */
+    max-width: 1300px;
+    gap: 10px;
+}
+.eventsTimeline>div{
+    cursor: pointer;
+}
+.timelineInputs{
+    width: 25px;
+    aspect-ratio: 1/2;
+    border-radius: 12px;
+    background: black;
+    z-index: 1;
+    position: relative;
+
+}
+
+.timelineInputs::before{
+    content: "";
+    width: 5.2vw;
+    height: 5px;
+    display: block;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: calc(12.5px - 5.2vw);
+}
+.timelineInputs::after{
+    content: "";
+    width: 5.2vw;
+    height: 5px;
+    display: block;
+    background: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(12.5px - 5.2vw);
+}
+
+.active::before{
+    background: blue;
+}
+
+.active::after{
+    background: blue;
+}
+.active{
+    background: blue;
+}
+
+/* event timeline css ends */
+
+@media(max-width: 750px){
+    .eventInfo {
+        min-width: 300px;
+        grid-template-areas: 
+        "a b b"
+        "c c c";
+    }
+    .eventsTimeline{
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .eventsTimeline>div{
+      width: 30px;  
+     } 
+    .timelineInputs::after{
+        display: none;
+    }
+    .timelineInputs::before{
+        display: none;
+    }
+}
+@media(max-width: 300px){
+    .eventInfo {
+        min-width: 250px;
+        grid-template-areas: 
+        ". a ."
+        "b b b"
+        "c c c";
+    }
+}
