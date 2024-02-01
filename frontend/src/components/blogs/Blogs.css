@@ -1,0 +1,23 @@
+.blogs>div{
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 50px 5vw;
+}
+.blogs>div>h2{
+  text-align: center;
+  font-weight: 700;
+  font-size:40px;
+}
+.blogs>div>h3{
+  text-align: center;
+  color: var(--color-blue);
+}
+.blogs>div>h2>span:nth-child(1){
+  color: var(--color-green);
+}
+.blogs>div>h2>span:nth-child(2){
+  color: var(--color-red);
+}
+.blogs>div>h2>span:nth-child(4){
+  color: var(--color-yellow);
+}

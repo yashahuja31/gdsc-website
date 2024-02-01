@@ -30,6 +30,7 @@ export default function Header() {
           <Link onClick={toggleNav} to="/">Home</Link>
           <Link  onClick={toggleNav} to="/events">Event</Link>
           <Link onClick={toggleNav}  to="/team">Team</Link>
+          <Link onClick={toggleNav}  to="/blogs">Blog</Link>
           <a onClick={toggleNav}  className="links">Contact Us</a>
           <a  onClick={toggleNav} className="links">Join Community</a>
         </div>
