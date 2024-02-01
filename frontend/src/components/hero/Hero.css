@@ -1,46 +1,55 @@
 .hero {
   background-image: url(/hero/background.png);
+  background-position: center;
+  background-size: cover;
+  background-color: white;
   position: relative;
   overflow-x: hidden;
+  z-index: -6;
 }
-.svg1{
+
+.svg1 {
   z-index: -5;
   position: absolute;
   top: 0;
   left: 0;
   width: 20vw;
 }
-.svg2{
+
+.svg2 {
   z-index: -5;
   position: absolute;
   top: 0;
   right: 0;
   width: 20vw;
 }
-.svg3{
+
+.svg3 {
   z-index: -5;
   position: absolute;
-  bottom: 20vh;
+  bottom: 20%;
   left: 0;
   width: 15vw;
   height: 15vw;
   transform: rotate(-23deg) translateX(-60%);
   background: var(--color-yellow);
 }
-.svg4{
+
+.svg4 {
   z-index: -5;
   position: absolute;
-  bottom: 20vh;
+  bottom: 20%;
   left: 0;
   width: 15vw;
   height: 15vw;
   transform: rotate(-23deg) translateX(-60%) scale(1.2);
   border: 5px solid lightgray;
 }
-.svg5{
+
+.svg5 {
   z-index: -5;
   position: absolute;
-  bottom: 20vh;
+  bottom: 15%;
   right: 0;
   width: 15vw;
   height: 15vw;
@@ -48,10 +57,11 @@
   background: var(--color-green);
   border-radius: 200px;
 }
-.svg6{
+
+.svg6 {
   z-index: -5;
   position: absolute;
-  bottom: 20vh;
+  bottom: 15%;
   right: 0;
   width: 15vw;
   height: 15vw;
@@ -76,16 +86,6 @@
 .hero-flex>div>img {
   max-width: 600px;
   width: 50vw;
-}
-@media(max-width:600px){
-.hero-flex>div>img {
-  width: 100%;
-}
-.hero-flex {
-  flex-direction: column-reverse;
-  align-items: start;
-}
-
 }
 
 .hero-title {
@@ -130,3 +130,18 @@
   text-align: center;
   line-height: 26px;
 }
+@media (max-width: 600px) {
+  .hero-flex>div>img {
+    width: 100%;
+  }
+
+  .hero-flex {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+
+  .hero-title>h1 {
+    font-size: 40px;
+  }
+}
+

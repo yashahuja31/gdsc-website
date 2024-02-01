@@ -11,7 +11,8 @@ const CloudComponent = () => {
           { image: "/cloudComponent/cloud1.svg", speed: -32 },
           { image: "/cloudComponent/cloud4.svg", speed: -50 },
         ]}
-        style={{ aspectRatio: "3 / 1" }}
+        style={{ width: "clamp(700px,100vw,2560px)",
+          height: "clamp(400px,40vw,600px)" }}
         className="layers"
       />
     </div>

@@ -2,6 +2,7 @@ import "./Domains.css";
 
 export default function Domains() {
     return (
+    <div className="domain-wpr">
         <div className="domainbody">
             <h1 className="domainheading"> Domains </h1>
             <div className="container">
@@ -83,5 +84,6 @@ export default function Domains() {
                 </div>
             </div>
         </div>
+    </div>
     );
 }
