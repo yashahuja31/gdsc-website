@@ -1,16 +1,16 @@
 import Header from "../components/header/Header.jsx";
-import Footer from "../components/footer/Footer.jsx";
-import Team from "../components/team/Team.jsx";
+import Events from "../components/events/Events.jsx";
 import CloudComponent from "../components/cloudComponent/CloudComponent.jsx";
+import Footer from "../components/footer/Footer.jsx";
 
-export default function TeamPage() {
+export default function EventsPage() {
 
     return (
-        <div>
+        <>
             <Header />
-            <Team />
+            <Events/>
             <CloudComponent />
             <Footer />
-        </div>
+        </>
     );
 }

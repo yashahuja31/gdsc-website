@@ -1,15 +1,11 @@
-.root{
-    height: 100vh;
-    width: 100vw;
-}
-h1{
+
+.eventSection h1{
     margin: 0;
     font-size:5em;
 }
 .eventSection{
     background: url(/events/background.png);
-    width: 100vw;
-    height: 100vh;
+    flex-grow: 1;
     display: grid;
     justify-items: center;
     align-items: center;
