@@ -1,0 +1,176 @@
+.feedback-flex-container {
+  display: flex;
+  padding-bottom: 70px;
+}
+
+.feedbackcontainer {
+  width: 50%;
+  margin-left: 90px;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+.feedbackheading {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.feedbacktext {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 15px;
+}
+.feedbackinputline {
+  color: grey;
+  margin-top: 50px;
+}
+
+.mb-3 {
+  width: 70%;
+}
+
+.feedbackform {
+  border: 1px solid grey;
+}
+.feedbackform:focus {
+  border-color: #000;
+  box-shadow: none !important;
+}
+
+.ficon {
+  color: gray;
+}
+.faqcont {
+  margin-top: 70px;
+}
+
+.faq {
+  font-size: 20px;
+  font-weight: 600;
+  display: inline;
+  margin-left: 5px;
+}
+
+.faqimg {
+  width: 7px;
+  height: 30px;
+}
+
+.dropdowncontainer {
+  width: 70%;
+  margin-top: 20px;
+}
+.dropdown {
+  background-color: #e0e0e0;
+  position: relative;
+  border-radius: 10px;
+  height: 50px;
+  padding-top: 12px;
+  padding-left: 15px;
+}
+
+.drp_icon {
+  display: inline;
+  position: absolute;
+  right: 10px;
+  font-size: larger;
+}
+
+.dropdown_two {
+  margin-top: 20px;
+}
+
+.dropdown_three {
+  margin-top: 20px;
+}
+
+.drp_content {
+  padding-left: 15px;
+  background-color: #eeeeee;
+  margin-top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+  margin-top: -5px;
+}
+
+.feedback-card {
+  border-radius: 0 !important;
+  width: 18rem;
+  color: white;
+  border-radius: 10px !important;
+}
+
+.feedback-card-text,
+.card-subtitle {
+  color: white !important;
+}
+.card {
+  transition: none !important;
+  box-shadow: none !important;
+}
+.card:hover {
+  transition: none !important;
+}
+.card-one {
+  background-color: #ea4335;
+  margin-left: 200px;
+  margin-top: 70px;
+  transform: rotate(10deg) !important;
+}
+
+.card-two {
+  background-color: #49a84c;
+  margin-top: 70px;
+  margin-left: 200px;
+  transform: rotate(-7deg) !important;
+}
+
+.card-three {
+  background-color: #f6bc00;
+  margin-top: 50px;
+  margin-left: 90px;
+  transform: rotate(10deg) !important;
+}
+
+@media (max-width: 768px) {
+  .feedbackcontainer {
+    width: 100%;
+  }
+
+  .dropdowncontainer,
+  .mb-3 {
+    width: 80%;
+    margin-left: 40px;
+  }
+
+  .feedback-flex-container {
+    display: block;
+    align-items: start;
+  }
+
+  .feedbackcontainer {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .feedbackcardcontainer {
+    overflow-x: auto;
+    white-space: wrap;
+    display: flex;
+  }
+  .card-one,
+  .card-two,
+  .card-three {
+    transform: rotate(0) !important;
+    margin: auto;
+  }
+  .feedback-card {
+    flex: 0 0 auto;
+    margin-left: 10px;
+  }
+  .dropdown {
+    text-align: start;
+  }
+}
