@@ -45,12 +45,15 @@ export default function FeedBack() {
         <p className="feedbackinputline">Your feedback magic works here!</p>
         <InputGroup className="mb-3">
           <Form.Control
+            as="textarea"
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
             placeholder="write here .."
-            className="feedbackform"
+            className="feedbackform mb-3"
           />
         </InputGroup>
+        <button className="input-button">Send</button>
+
         <div className="faqcont">
           <img src={"/feedback/Rectangle623.png"} className="faqimg" />
           <p className="faq">FAQs</p>

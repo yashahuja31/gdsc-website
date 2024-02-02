@@ -27,14 +27,32 @@
 
 .mb-3 {
   width: 70%;
+  height: 100px;
 }
 
 .feedbackform {
+  width: 70%;
+  height: 120px;
   border: 1px solid grey;
+  resize: none;
 }
+
 .feedbackform:focus {
   border-color: #000;
   box-shadow: none !important;
+}
+.input-button {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  height: 40px;
+  width: 100px;
+  border: 1px solid grey;
+  transition: opacity 0.3s ease;
+}
+
+.input-button:hover {
+  opacity: 0.8;
 }
 
 .ficon {
@@ -141,8 +159,8 @@
 
   .dropdowncontainer,
   .mb-3 {
-    width: 80%;
-    margin-left: 40px;
+    width: 90%;
+    margin-left: 10px;
   }
 
   .feedback-flex-container {
