@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./Blogs.css";
 
 export default function Blogs() {
+  const [lengthArray, setLengthArray] = useState([]);
   const [blogs, setBlogs] = useState([
     {
       title: "Front end and Web Design",
@@ -15,7 +16,7 @@ export default function Blogs() {
       description: "New innovations and ideas in design.",
     },
     {
-      title: "Front end and Web Design",
+      title: "Front end and Web Design jskfdas sdf",
       date: "September 20, 2022",
       description: "New innovations and ideas in design.",
     },
@@ -25,6 +26,33 @@ export default function Blogs() {
       description: "New innovations and ideas in design.",
     },
   ]);
+  const addMoreBlogs = () => {
+    const newBlogs = [
+      ...blogs,
+      {
+        title: "New Blog 1",
+        date: "February 3, 2024",
+        description: "This is a new blog added dynamically.This is a new blog added dynamically.This is a new blog added dynamically.",
+      },
+      {
+        title: "New Blog 2",
+        date: "February 3, 2024",
+        description: "Another new blog added dynamically.This is a new blog added dynamically.",
+      },
+      {
+        title: "New Blog 3",
+        date: "February 3, 2024",
+        description: "This is a new blog added dynamically.This is a new blog added dynamically.This is a new blog added dynamically.",
+      },
+    ];
+    const moreLength = Math.floor((newBlogs.length - 4) / 3);
+    let tempArray = [];
+    for (let i = 0; i < moreLength; i++) {
+      tempArray.push(i);
+    }
+    setLengthArray(tempArray);
+    setBlogs(newBlogs);
+  };
   return (
     <div className="blogs">
       <div className="blog-star">
@@ -53,11 +81,24 @@ export default function Blogs() {
         <h3>Welcome to Our Blogopolis!</h3>
         <div className="blog-flex1">
           <div>
+          <div>
             <div className="blog-card bcard1">
               <h4>{blogs[0].title}</h4>
               <p>{blogs[0].date}</p>
               <p>{blogs[0].description}</p>
             </div>
+          </div>
+          {lengthArray.map((item, index) => {
+            return (
+                  <div key={index}>
+                     <div className="blog-card bcard7 bcard1" >
+                      <h4>{blogs[3 * item + 4].title}</h4>
+                      <p>{blogs[3 * item + 4].date}</p>
+                      <p>{blogs[3 * item + 4].description}</p>
+                    </div>
+                  </div>
+            );
+          })}
           </div>
           <div className="blog-flex2">
             <div className="blog-flex3">
@@ -83,10 +124,30 @@ export default function Blogs() {
                 <p>{blogs[3].description}</p>
               </div>
             </div>
+          {lengthArray.map((item, index) => {
+            return (
+            <div key={index} className="blog-flex3 blog-flex4">
+                  <div>
+                    <div className="blog-card h100">
+                      <h4>{blogs[3 * item + 5].title}</h4>
+                      <p>{blogs[3 * item + 5].date}</p>
+                      <p>{blogs[3 * item + 5].description}</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="blog-card h100">
+                      <h4>{blogs[3 * item + 6].title}</h4>
+                      <p>{blogs[3 * item + 6].date}</p>
+                      <p>{blogs[3 * item + 6].description}</p>
+                    </div>
+                  </div>
+              </div>
+            );
+          })}
           </div>
         </div>
         <div className="more-btn">
-          <a>More Blogs</a>
+          <a onClick={addMoreBlogs}>More Blogs</a>
         </div>
       </div>
     </div>
