@@ -147,8 +147,18 @@ const mapData = mockdata.map(i => ({
 
 
 export default function Events() {
-
     const [cardIndex, setCardIndex] = useState(0);
+    const [eventData, setEventData] = useState([]);
+
+    useEffect(() => {
+        axios.get("/events")
+            .then(res => res.data)
+            .then(data => {
+                setEventData(data.map(i => ({...i, title: new Date(i["eventDateTime"]).toDateString()})));
+            });
+    }, []);
+
+
 
     const onTimelineItemSelect = ({index}) => {
         setCardIndex(index);
