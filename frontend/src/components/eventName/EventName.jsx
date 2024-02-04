@@ -23,10 +23,10 @@ export default function EventName() {
     }, []);
 
     return (
-        <div className="eventSection">
-            <h1>{cardData.name}</h1>
+        <div className="eventNameSection">
+            <h1><b>{cardData.name}</b></h1>
             <div>
-                <Carousel fade indicators={false}>
+                <Carousel interval={5000} indicators={false}>
                     {cardData.eventImages.map(
                         (i, idx) => <Carousel.Item key={idx + 1}>
                             <img src={i} alt={"image " + (idx + 1)}/>
