@@ -13,7 +13,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 20vw;
+  width: clamp(100px ,20vw,200px);
 }
 
 .svg2 {
@@ -21,7 +21,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 20vw;
+  width: clamp(100px ,20vw,200px);
 }
 
 .svg3 {
@@ -29,8 +29,8 @@
   position: absolute;
   bottom: 20%;
   left: 0;
-  width: 15vw;
-  height: 15vw;
+  width: clamp(100px ,15vw,300px);
+  height: clamp(100px ,15vw,300px);
   transform: rotate(-23deg) translateX(-60%);
   background: var(--color-yellow);
 }
@@ -40,8 +40,8 @@
   position: absolute;
   bottom: 20%;
   left: 0;
-  width: 15vw;
-  height: 15vw;
+  width: clamp(100px ,15vw,300px);
+  height: clamp(100px ,15vw,300px);
   transform: rotate(-23deg) translateX(-60%) scale(1.2);
   border: 5px solid lightgray;
 }
@@ -51,8 +51,8 @@
   position: absolute;
   bottom: 15%;
   right: 0;
-  width: 15vw;
-  height: 15vw;
+  width: clamp(100px ,15vw,300px);
+  height: clamp(100px ,15vw,300px);
   transform: rotate(-23deg) translateX(60%);
   background: var(--color-green);
   border-radius: 200px;
@@ -63,8 +63,8 @@
   position: absolute;
   bottom: 15%;
   right: 0;
-  width: 15vw;
-  height: 15vw;
+  width: clamp(100px ,15vw,300px);
+  height: clamp(100px ,15vw,300px);
   transform: rotate(-23deg) translateX(60%) scale(1.2);
   border: 5px solid lightgray;
   border-radius: 200px;
