@@ -1,6 +1,7 @@
 import "./Events.css"
 import {Chrono} from "react-chrono";
-import {useState} from "react";
+import {useEffect, useState} from "react";
+import axios from "axios";
 
 const mockdata = [
     {
@@ -175,7 +176,8 @@ export default function Events() {
             <div className="eventsTimeline">
                 <Chrono
                     mode={"HORIZONTAL"}
-                    items={mapData}
+                    allowDynamicUpdate={true}
+                    items={eventData}
                     cardPositionHorizontal={"TOP"}
                     cardLess={true}
                     // timelinePointShape={"square"}

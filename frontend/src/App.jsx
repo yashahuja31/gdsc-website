@@ -9,8 +9,12 @@ import Blogs from "./components/blogs/Blogs.jsx";
 import TeamPage from "./pages/TeamPage.jsx";
 import { ParallaxProvider } from "react-scroll-parallax";
 import EventsPage from "./pages/EventsPage.jsx";
+import axios from "axios";
 
 function App() {
+
+  axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:8000"
+
   return (
     <ParallaxProvider>
       <BrowserRouter>
