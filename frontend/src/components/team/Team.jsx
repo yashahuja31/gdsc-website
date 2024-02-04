@@ -8,7 +8,7 @@ const TeamCard = ({data}) => (
         <div className={`team-card-img team-card-img-${Math.floor(Math.random() * 4) + 1}`}>
             <img
                 className="team-card-img-top"
-                src={"/team/img1.png"}
+                src={data.imageUrl}
                 alt="team image"
             />
         </div>
