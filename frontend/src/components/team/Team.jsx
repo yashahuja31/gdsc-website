@@ -5,7 +5,7 @@ import axios from "axios";
 
 const TeamCard = ({data}) => (
     <div className="team-card">
-        <div className="team-card-img-1">
+        <div className={`team-card-img team-card-img-${Math.floor(Math.random() * 4) + 1}`}>
             <img
                 className="team-card-img-top"
                 src={"/team/img1.png"}
@@ -40,8 +40,14 @@ export default function Team() {
                 <h1 className="team-heading">Meet The Team</h1>
                 <div className="team-container">
                     {
-                        members.map((i, idx) => <TeamCard key={idx+1} data={i} />)
+                        members.map((i, idx) => i.memberType === "Team" ? <TeamCard key={idx + 1} data={i}/> : <></>)
+                    }
+                </div>
 
+                <h1 className="team-heading">Contributors</h1>
+                <div className="team-container">
+                    {
+                        members.map((i, idx) => i.memberType === "Contributor" ? <TeamCard key={idx + 1} data={i}/> : <></>)
                     }
                 </div>
             </div>
