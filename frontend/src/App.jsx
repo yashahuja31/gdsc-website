@@ -10,6 +10,7 @@ import TeamPage from "./pages/TeamPage.jsx";
 import { ParallaxProvider } from "react-scroll-parallax";
 import EventsPage from "./pages/EventsPage.jsx";
 import axios from "axios";
+import EventName from "./components/eventName/EventName.jsx";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<IndexPage />} />
           <Route path={"/team"} element={<TeamPage />} />
           <Route path={"/events"} element={<EventsPage />} />
+          <Route path={"/events/:eventId"} element={<EventName />} />
           <Route path={"/blogs"} element={<Blogs />} />
         </Routes>
         <Cloud />
