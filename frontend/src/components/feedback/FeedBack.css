@@ -41,6 +41,18 @@
   box-shadow: none !important;
 }
 
+.feedbackcardcontainer {
+  position: relative;
+}
+
+.feedbackLineDashed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(6.2deg);
+
+}
+
 .feedbacksvg {
   height: 2px;
   position: absolute;
@@ -194,6 +206,9 @@
     overflow-x: auto;
     white-space: wrap;
     display: flex;
+  }
+  .feedbackLineDashed {
+    display: none;
   }
   .card-one,
   .card-two,
