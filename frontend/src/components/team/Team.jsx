@@ -16,10 +16,10 @@ const TeamCard = ({data, setCurrentProfile}) => (
         <div className="card-body">
             <h3>{data.name}</h3>
             <p>{data.position}</p>
-            <a className="icons" href="/">
+            <a className="icons" href={data.profiles.find(i => i.profileType === "Github")?.profileUrl}>
                 <FaGithub/>
             </a>
-            <a className="icons" href="/">
+            <a className="icons" href={data.profiles.find(i => i.profileType === "Linkedin")?.profileUrl}>
                 <FaLinkedin/>
             </a>
         </div>
