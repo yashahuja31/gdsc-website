@@ -50,10 +50,10 @@
 }
 
 .feedbackdiv {
-  position: "relative";
-  display: "flex";
-  flex-direction: "column";
-  width: "70%";
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
 .svgicon {
@@ -175,8 +175,7 @@
     width: 100%;
   }
 
-  .dropdowncontainer,
-  .feedbackform {
+  .dropdowncontainer {
     width: 90%;
     margin-left: 10px;
   }
@@ -208,5 +207,9 @@
   }
   .dropdown {
     text-align: start;
+  }
+
+  .feedbackdiv {
+    width: 100%;
   }
 }

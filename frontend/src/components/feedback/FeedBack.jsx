@@ -94,13 +94,13 @@ export default function FeedBack() {
         </p>
         <p className="feedbackinputline">Your feedback magic works here!</p>
         <div
-          style={{
-            position: "relative",
-            display: "flex",
-            flexDirection: "column",
-            width: "70%",
-          }}
           className="feedbackdiv"
+          // style={{
+          //   position: "relative",
+          //   display: "flex",
+          //   flexDirection: "column",
+          //   width: "70%",
+          // }}
         >
           <textarea
             aria-label="Default"
