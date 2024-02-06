@@ -25,21 +25,51 @@
   margin-top: 50px;
 }
 
-.mb-3 {
-  width: 70%;
-  height: 100px;
-}
-
 .feedbackform {
-  width: 70%;
+  width: 100%;
   height: 120px;
-  border: 1px solid grey;
-  resize: none;
+  padding-left: 10px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 10px;
+  padding-top: 5px;
+  margin-bottom: 10px;
 }
 
 .feedbackform:focus {
   border-color: #000;
   box-shadow: none !important;
+}
+
+.feedbackcardcontainer {
+  position: relative;
+}
+
+.feedbackLineDashed {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: rotate(6.2deg);
+
+}
+
+.feedbacksvg {
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.feedbackdiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.svgicon {
+  height: 20px;
 }
 .input-button {
   margin-top: 10px;
@@ -157,8 +187,7 @@
     width: 100%;
   }
 
-  .dropdowncontainer,
-  .mb-3 {
+  .dropdowncontainer {
     width: 90%;
     margin-left: 10px;
   }
@@ -178,6 +207,9 @@
     white-space: wrap;
     display: flex;
   }
+  .feedbackLineDashed {
+    display: none;
+  }
   .card-one,
   .card-two,
   .card-three {
@@ -190,5 +222,9 @@
   }
   .dropdown {
     text-align: start;
+  }
+
+  .feedbackdiv {
+    width: 100%;
   }
 }
