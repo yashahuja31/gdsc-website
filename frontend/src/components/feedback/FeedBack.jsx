@@ -5,29 +5,36 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleChevronRight,
-  faCircleChevronDown, faPaperPlane,
+  faCircleChevronDown,
+  faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import Card from "react-bootstrap/Card";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
-const SendImg = ({onClick}) => (
-    <svg onClick={onClick} xmlns="http://www.w3.org/2000/svg" fill="#000000" width={32}  viewBox="0 0 512 512">
+const SendImg = ({ onClick }) => (
+  <svg
+    onClick={onClick}
+    xmlns="http://www.w3.org/2000/svg"
+    fill="	#606060"
+    width={32}
+    viewBox="0 0 512 512"
+    className="svgicon"
+  >
+    <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
-      <g id="SVGRepo_bgCarrier" strokeWidth="0"/>
+    <g
+      id="SVGRepo_tracerCarrier"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
 
-      <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"/>
+    <g id="SVGRepo_iconCarrier">
+      <title>ionicons-v5-q</title>
 
-      <g id="SVGRepo_iconCarrier">
-
-        <title>ionicons-v5-q</title>
-
-        <path
-            d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z"/>
-
-      </g>
-
-    </svg>
-)
+      <path d="M476.59,227.05l-.16-.07L49.35,49.84A23.56,23.56,0,0,0,27.14,52,24.65,24.65,0,0,0,16,72.59V185.88a24,24,0,0,0,19.52,23.57l232.93,43.07a4,4,0,0,1,0,7.86L35.53,303.45A24,24,0,0,0,16,327V440.31A23.57,23.57,0,0,0,26.59,460a23.94,23.94,0,0,0,13.22,4,24.55,24.55,0,0,0,9.52-1.93L476.4,285.94l.19-.09a32,32,0,0,0,0-58.8Z" />
+    </g>
+  </svg>
+);
 
 export default function FeedBack() {
   const [isDropdownoneVisible, setIsDropdownoneVisible] = useState(false);
@@ -54,13 +61,22 @@ export default function FeedBack() {
   const sendEmail = (e) => {
     e.preventDefault();
     console.log("Form Data:", feedback);
-    emailjs.send('service_cfqbgtu', 'template_uvi4g37', {feedback}, '49d2lQplNu6mw181N')
-        .then((result) => {
+    emailjs
+      .send(
+        "service_cfqbgtu",
+        "template_uvi4g37",
+        { feedback },
+        "49d2lQplNu6mw181N"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
           console.log("message sent!!");
-        }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-        });
+        }
+      );
   };
 
   return (
@@ -77,28 +93,37 @@ export default function FeedBack() {
           tempor arcu Nam sed.vensuf lorem ingdeg ipsum denvik.
         </p>
         <p className="feedbackinputline">Your feedback magic works here!</p>
-        <div style={{display: "flex", flexDirection: 'column'}}>
-          <input
-              aria-label="Default"
-              aria-describedby="inputGroup-sizing-default"
-              placeholder="write here .."
-              className="feedbackform mb-3"
-              value={feedback}
-              onChange={(e) => setFeedback(e.target.value)}
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            flexDirection: "column",
+            width: "70%",
+          }}
+          className="feedbackdiv"
+        >
+          <textarea
+            aria-label="Default"
+            aria-describedby="inputGroup-sizing-default"
+            placeholder="write here .."
+            className="feedbackform "
+            value={feedback}
+            onChange={(e) => setFeedback(e.target.value)}
           />
-          <SendImg onClick={sendEmail}/>
+          <div className="feedbacksvg">
+            <SendImg onClick={sendEmail} />
+          </div>
         </div>
 
-
         <div className="faqcont">
-          <img src={"/feedback/Rectangle623.png"} className="faqimg"/>
+          <img src={"/feedback/Rectangle623.png"} className="faqimg" />
           <p className="faq">FAQs</p>
         </div>
         <div className="dropdowncontainer">
           <div
-              onClick={() => handleDropdownClick(1)}
-              style={{
-                cursor: "pointer",
+            onClick={() => handleDropdownClick(1)}
+            style={{
+              cursor: "pointer",
               backgroundColor: isDropdownoneVisible ? "#c8c8c8" : "#e0e0e0",
             }}
             className="dropdown dropdown_one"
@@ -228,5 +253,3 @@ export default function FeedBack() {
     </div>
   );
 }
-
-
