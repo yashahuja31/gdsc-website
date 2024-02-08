@@ -4,6 +4,7 @@ import {faGithub, faInstagram, faLinkedin, faMedium, faTwitter} from "@fortaweso
 import {useEffect, useState} from "react";
 import {Dialog} from "@mui/material";
 import axios from "axios";
+import {faGlobe} from "@fortawesome/free-solid-svg-icons";
 
 const mapping = {
     Instagram: faInstagram,
@@ -11,13 +12,14 @@ const mapping = {
     Medium: faMedium,
     Linkedin: faLinkedin,
     Github: faGithub,
+    Portfolio: faGlobe,
 }
 
 export default function TeamDetailedCard({profileId}) {
     const [open, setOpen] = useState(false);
     const [data, setData] = useState({
         id: "",
-        profiles: [],
+        profiles: [{profileType: "", profileUrl: ""}],
         name: "",
         about: "",
         position: "",
@@ -52,15 +54,14 @@ export default function TeamDetailedCard({profileId}) {
                 </div>
                 <div className={"profileContentContainer"}>
                     <h2><b>{data.name}</b></h2>
-                    <p>{data.position}</p>
+                    <>{data.position}</>
                     <br/>
                     <br/>
                     <p>{data.about}</p>
-                    <br/>
-                    <a href={data.profiles.find(i => i.profileType === "Portfolio")?.profileUrl}>portfolio</a>
+
                 </div>
                 <div className={"profileLinksContainer"}>
-                    {data.profiles.map((i, idx) =>
+                {data.profiles.map((i, idx) =>
                         <a key={idx+1} href={i.profileUrl}>
                             <FontAwesomeIcon size="xl" icon={mapping[i.profileType]}/>
                         </a>

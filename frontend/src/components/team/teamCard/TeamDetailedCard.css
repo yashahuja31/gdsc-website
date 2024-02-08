@@ -1,5 +1,4 @@
 .profile {
-    width: 25rem;
     min-height: 20rem;
     margin: 1rem;
     padding: 1rem;
@@ -38,6 +37,12 @@
     font-size: smaller;
 }
 
+.profileContentContainer p {
+    padding: 1rem;
+    background-color: #e0e0e0;
+    border-radius: 20px;
+}
+
 .profile p {
     margin: 0;
 }
@@ -46,7 +51,7 @@
 .profileLinksContainer {
     height: fit-content;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     font-size: 1.5rem;
     margin-top: 1rem;
 }
@@ -55,4 +60,5 @@
     text-decoration: none !important;
     color: black;
     border-bottom: none;
+    margin: 0 5px;
 }
