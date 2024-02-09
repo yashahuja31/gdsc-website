@@ -1,7 +1,7 @@
 import "./TeamDetailedCard.css"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub, faInstagram, faLinkedin, faMedium, faTwitter} from "@fortawesome/free-brands-svg-icons";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import {Dialog} from "@mui/material";
 import axios from "axios";
 import {faGlobe} from "@fortawesome/free-solid-svg-icons";
@@ -15,25 +15,24 @@ const mapping = {
     Portfolio: faGlobe,
 }
 
+const initState = {
+    id: "",
+    profiles: [{profileType: "", profileUrl: ""}],
+    name: "",
+    about: "",
+    position: "",
+    memberType: "",
+    imageUrl: "",
+    branch: ""
+}
+
 export default function TeamDetailedCard({profileId}) {
     const [open, setOpen] = useState(false);
-    const [data, setData] = useState({
-        id: "",
-        profiles: [{profileType: "", profileUrl: ""}],
-        name: "",
-        about: "",
-        position: "",
-        memberType: "",
-        imageUrl: "",
-        branch: ""
-    });
-
-    useEffect(() => {
-        if (profileId !== "") setOpen(true)
-    }, [data]);
+    const [data, setData] = useState(initState);
 
     useEffect(() => {
         if (profileId === "") return;
+        setOpen(true);
         axios.get("/members/" + profileId)
             .then(res => res.data)
             .then(data => setData(data))
@@ -42,13 +41,16 @@ export default function TeamDetailedCard({profileId}) {
     return (
         <Dialog
             open={open}
-            onClose={() => setOpen(false)}
+            onClose={() => {
+                setOpen(false);
+                setData(initState);
+            }}
         >
             <div className={"profile"}>
                 <div className={"profileImagesContainer"}>
                     <img src={"/team/teamBanner.png"} alt={"profile banner"}/>
                     <div className={"mainProfileImageContainer"}>
-                        <img src={data.imageUrl} alt={"profile image"} width={90} height={90}/>
+                        <img src={data.imageUrl} width={90} height={90}/>
                     </div>
 
                 </div>

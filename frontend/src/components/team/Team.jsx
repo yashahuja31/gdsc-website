@@ -1,11 +1,11 @@
 import "./Team.css";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import axios from "axios";
 import TeamDetailedCard from "./teamCard/TeamDetailedCard.jsx";
 
 const TeamCard = ({data, setCurrentProfile}) => (
-    <div className="team-card" onClick={()=>setCurrentProfile(data.id)}>
+    <div className="team-card" onClick={() => setCurrentProfile(data.id)}>
         <div className={`team-card-img team-card-img-${Math.floor(Math.random() * 4) + 1}`}>
             <img
                 className="team-card-img-top"
@@ -36,6 +36,19 @@ export default function Team() {
             .then(data => setMembers(data));
     }, []);
 
+    const renderedTeamCards = useMemo(() => {
+            if (members.length === 0) return;
+            return members.map((i, idx) => i.memberType === "Team" ?
+                <TeamCard key={idx + 1} data={i} setCurrentProfile={setCurrentProfile}/> : null)
+        }
+        , [members])
+
+    const renderedContributorsCards = useMemo(() => {
+            if (members.length === 0) return;
+            return members.map((i, idx) => i.memberType === "Contributor" ?
+                <TeamCard key={idx + 1} data={i} setCurrentProfile={setCurrentProfile}/> : null)
+        }
+        , [members])
 
     return (
         <>
@@ -43,18 +56,11 @@ export default function Team() {
                 <div>
                     <h1 className="team-heading">Meet The Team</h1>
                     <div className="team-container">
-                        {
-                            members.map((i, idx) => i.memberType === "Team" ?
-                                <TeamCard key={idx + 1} data={i} setCurrentProfile={setCurrentProfile} /> : <></>)
-                        }
+                        {renderedTeamCards}
                     </div>
-
                     <h1 className="team-heading">Contributors</h1>
                     <div className="team-container">
-                        {
-                            members.map((i, idx) => i.memberType === "Contributor" ?
-                                <TeamCard key={idx + 1} data={i} setCurrentProfile={setCurrentProfile} /> : <></>)
-                        }
+                        {renderedContributorsCards}
                     </div>
                 </div>
             </div>
