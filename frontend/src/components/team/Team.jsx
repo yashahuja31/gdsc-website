@@ -33,7 +33,7 @@ export default function Team() {
     useEffect(() => {
         axios.get("/members")
             .then(res => res.data)
-            .then(data => setMembers(data));
+            .then(data => setMembers(data.sort((i, j) => j.priority - i.priority)));
     }, []);
 
     const renderedTeamCards = useMemo(() => {

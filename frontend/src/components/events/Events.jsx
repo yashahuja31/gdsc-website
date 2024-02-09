@@ -21,6 +21,7 @@ export default function Events() {
         axios.get("/events")
             .then(res => res.data)
             .then(data => {
+                data = data.sort((i, j) => new Date(j.date) - new Date(i.date));
                 setEventData(data.map(i => ({...i, cardTitle: i.id, title: new Date(i["date"]).toDateString()})));
             });
     }, []);
