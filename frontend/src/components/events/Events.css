@@ -18,15 +18,22 @@
     top: revert !important;
     bottom: 0 !important;
 }
+.eventsTimeline .kbQZhB.horizontal {
+    width: 100% !important;
+}
+.eventsTimeline .timeline-horizontal-container.horizontal {
+    justify-content: center !important;
+}
 .eventsTimeline .timeline-circle.active {
     zoom: 1.5;
     background: white !important;
-
 }
 
 .eventsTimeline .timeline-item-title.active {
     background: transparent !important;
 }
+
+
 
 /* event info css starts */
 .eventInfo{
