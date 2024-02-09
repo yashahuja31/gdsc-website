@@ -45,12 +45,21 @@
   position: relative;
 }
 
+.feedbacklinecontainer {
+  position: absolute;
+}
+
+.rocketimg {
+  height: 150px;
+  position: absolute;
+  left: 50%;
+  transform: rotate(5deg);
+}
 .feedbackLineDashed {
   position: absolute;
   width: 100%;
   height: 100%;
   transform: rotate(6.2deg);
-
 }
 
 .feedbacksvg {
@@ -69,7 +78,14 @@
 }
 
 .svgicon {
-  height: 20px;
+  border: 1px #202020 solid;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+  background-color: #e0e0e0;
+}
+
+.svgicon:hover {
+  transform: scale(1.05);
 }
 .input-button {
   margin-top: 10px;
@@ -150,6 +166,9 @@
   border-radius: 10px !important;
 }
 
+.feedback-title {
+  text-align: start !important;
+}
 .feedback-card-text,
 .card-subtitle {
   color: white !important;
@@ -163,28 +182,36 @@
 }
 .card-one {
   background-color: #ea4335;
-  margin-left: 200px;
-  margin-top: 70px;
+  margin-left: 180px;
+  margin-top: 140px;
   transform: rotate(10deg) !important;
 }
 
 .card-two {
   background-color: #49a84c;
   margin-top: 70px;
-  margin-left: 200px;
+  margin-left: 180px;
   transform: rotate(-7deg) !important;
 }
 
 .card-three {
   background-color: #f6bc00;
-  margin-top: 50px;
-  margin-left: 90px;
+  margin-top: 60px;
+  margin-left: 20px;
   transform: rotate(10deg) !important;
+}
+
+.rocket1img {
+  position: relative;
+  top: 100%;
+  transform: rotate(10deg);
 }
 
 @media (max-width: 768px) {
   .feedbackcontainer {
     width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .dropdowncontainer {
@@ -206,6 +233,7 @@
     overflow-x: auto;
     white-space: wrap;
     display: flex;
+    margin-right: 10px;
   }
   .feedbackLineDashed {
     display: none;
@@ -224,6 +252,9 @@
     text-align: start;
   }
 
+  .drp_content {
+    text-align: left;
+  }
   .feedbackdiv {
     width: 100%;
   }
