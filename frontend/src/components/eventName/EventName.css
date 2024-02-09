@@ -1,13 +1,17 @@
 .eventNameSection {
-    background: url(/events/background.png);
     align-items: center;
     display: flex;
     flex-direction: column;
     gap: 2rem;
     padding: 2rem 0;
-    background-repeat: no-repeat;
+    background: url(/events/background.png) no-repeat;
     background-size: cover;
     min-height: 100vh;
+}
+
+.eventNameSection img {
+    max-height: 500px;
+    max-width: 1000px;
 }
 
 .eventDescription {

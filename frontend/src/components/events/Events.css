@@ -37,7 +37,6 @@
 
 /* event info css starts */
 .eventInfo{
-    max-width: 1000px;
     align-items: center;
     border-radius: 34px;
     margin-top: 1rem;
@@ -51,7 +50,8 @@
 }
 
 .eventInfo img {
-    max-width: 100%;
+    max-height: 500px;
+    max-width: 1000px;
     border-radius: 20px;
 }
 
