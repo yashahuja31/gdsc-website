@@ -94,11 +94,8 @@ export default function FeedBack() {
           Blast us with your feedback rockets - we'll make it rain improvements!
         </p>
         <p className="feedbacktext">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer a
-          urna condimentum, ultricies erat sit amet, venenatis est. Suspendisse
-          porta facilisis tincidunt. Nam condimentum tincidunt nulla sed
-          accumsan. Vestibulum sed diam eu turpis aliquam gravida elementum
-          tempor arcu Nam sed.vensuf lorem ingdeg ipsum denvik.
+        We value your thoughts like a treasure map!<br/> Care to share your feedback and help us navigate towards perfection!
+
         </p>
         <p className="feedbackinputline">Your feedback magic works here!</p>
         <div className="feedbackdiv">
