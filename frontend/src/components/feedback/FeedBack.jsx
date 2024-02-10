@@ -42,6 +42,8 @@ export default function FeedBack() {
   const [isDropdownoneVisible, setIsDropdownoneVisible] = useState(false);
   const [isDropdowntwoVisible, setIsDropdowntwoVisible] = useState(false);
   const [isDropdownthreeVisible, setIsDropdownthreeVisible] = useState(false);
+  const [isDropdownfourVisible, setIsDropdownfourVisible] = useState(false);
+  const [isDropdownfiveVisible, setIsDropdownfiveVisible] = useState(false);
   const [feedback, setFeedback] = useState("");
 
   const handleDropdownClick = (dropdownNumber) => {
@@ -54,6 +56,12 @@ export default function FeedBack() {
         break;
       case 3:
         setIsDropdownthreeVisible(!isDropdownthreeVisible);
+        break;
+      case 4:
+        setIsDropdownfourVisible(!isDropdownfourVisible);
+        break;
+      case 5:
+        setIsDropdownfiveVisible(!isDropdownfiveVisible);
         break;
       default:
         break;
@@ -91,18 +99,17 @@ export default function FeedBack() {
     <div className="feedback-flex-container">
       <div className="feedbackcontainer">
         <p className="feedbackheading">
-          Blast us with your feedback rockets - we'll make it rain improvements!
+          Blast us with your feedback rockets - We'll make it rain improvements!
         </p>
         <p className="feedbacktext">
-        We value your thoughts like a treasure map!<br/> Care to share your feedback and help us navigate towards perfection!
-
+          We value your thoughts like a treasure map!<br/> Care to share your feedback and help us navigate towards perfection!
         </p>
         <p className="feedbackinputline">Your feedback magic works here!</p>
         <div className="feedbackdiv">
           <textarea
             aria-label="Default"
             aria-describedby="inputGroup-sizing-default"
-            placeholder="write here .."
+            placeholder="Write here..."
             className="feedbackform "
             value={feedback}
             onChange={(e) => setFeedback(e.target.value)}
@@ -117,6 +124,7 @@ export default function FeedBack() {
           <p className="faq">FAQs</p>
         </div>
         <div className="dropdowncontainer">
+          {/* start */}
           <div
             onClick={() => handleDropdownClick(1)}
             style={{
@@ -125,7 +133,7 @@ export default function FeedBack() {
             }}
             className="dropdown dropdown_one"
           >
-            Q. What is GDSC?
+            Q1. What is GDSC ADGIPS?
             <div className="drp_icon">
               {isDropdownoneVisible ? (
                 <FontAwesomeIcon className="ficon" icon={faCircleChevronDown} />
@@ -140,13 +148,11 @@ export default function FeedBack() {
           {isDropdownoneVisible && (
             <div className="drp_content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                a urna condimentum, ultricies erat sit amet, venenatis est.
-                Suspendisse porta facilisis tincidunt. Nam condimentum tincidunt
-                nulla sed accumsan.
+                GDSC ADGIPS is a student-led community supported by Google that aims to bridge the gap between theory and practical application of technology.
               </p>
             </div>
           )}
+          {/* end */}
           <div
             onClick={() => handleDropdownClick(2)}
             style={{
@@ -155,7 +161,7 @@ export default function FeedBack() {
             }}
             className="dropdown dropdown_two"
           >
-            Q. What is GDSC?
+            Q2. How to join us?
             <div className="drp_icon">
               {isDropdowntwoVisible ? (
                 <FontAwesomeIcon className="ficon" icon={faCircleChevronDown} />
@@ -170,13 +176,11 @@ export default function FeedBack() {
           {isDropdowntwoVisible && (
             <div className="drp_content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                a urna condimentum, ultricies erat sit amet, venenatis est.
-                Suspendisse porta facilisis tincidunt. Nam condimentum tincidunt
-                nulla sed accumsan.
+              To join GDSC, attend our events, workshops, and join our online platforms to stay updated. 
               </p>
             </div>
           )}
+
           <div
             onClick={() => handleDropdownClick(3)}
             style={{
@@ -185,7 +189,7 @@ export default function FeedBack() {
             }}
             className="dropdown dropdown_three"
           >
-            Q. What is GDSC?
+            Q3. What events does GDSC organise?
             <div className="drp_icon">
               {isDropdownthreeVisible ? (
                 <FontAwesomeIcon className="ficon" icon={faCircleChevronDown} />
@@ -200,10 +204,62 @@ export default function FeedBack() {
           {isDropdownthreeVisible && (
             <div className="drp_content">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                a urna condimentum, ultricies erat sit amet, venenatis est.
-                Suspendisse porta facilisis tincidunt. Nam condimentum tincidunt
-                nulla sed accumsan.
+              GDSC hosts a variety of events, including workshops, hackathons, tech talks, and networking sessions. Stay tuned to our social media and website for event and community meet ups announcements.
+              </p>
+            </div>
+          )}
+
+          <div
+            onClick={() => handleDropdownClick(4)}
+            style={{
+              cursor: "pointer",
+              backgroundColor: isDropdownfourVisible ? "#c8c8c8" : "#e0e0e0",
+            }}
+            className="dropdown dropdown_four"
+          >
+            Q4. How to collaborate with us ?
+            <div className="drp_icon">
+              {isDropdownfourVisible ? (
+                <FontAwesomeIcon className="ficon" icon={faCircleChevronDown} />
+              ) : (
+                <FontAwesomeIcon
+                  className="ficon"
+                  icon={faCircleChevronRight}
+                />
+              )}
+            </div>
+          </div>
+          {isDropdownfourVisible && (
+            <div className="drp_content">
+              <p>
+              If you're interested in collaboration, reach out to the GDSC core team.
+              </p>
+            </div>
+          )}
+          <div
+            onClick={() => handleDropdownClick(5)}
+            style={{
+              cursor: "pointer",
+              backgroundColor: isDropdownfiveVisible ? "#c8c8c8" : "#e0e0e0",
+            }}
+            className="dropdown dropdown_five"
+          >
+            Q5. How to contact us for support and enquiry ?
+            <div className="drp_icon">
+              {isDropdownfiveVisible ? (
+                <FontAwesomeIcon className="ficon" icon={faCircleChevronDown} />
+              ) : (
+                <FontAwesomeIcon
+                  className="ficon"
+                  icon={faCircleChevronRight}
+                />
+              )}
+            </div>
+          </div>
+          {isDropdownfiveVisible && (
+            <div className="drp_content">
+              <p>
+                Reach out to us through our contact form on the website, or connect with us on social media. We're here to help with any questions you may have.
               </p>
             </div>
           )}

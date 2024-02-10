@@ -35,8 +35,8 @@ export default function Header() {
           <a  onClick={toggleNav} className="links">Join Community</a>
         </div>
         <div>
-          <a className="nav-bt1">Contact Us</a>
-          <a className="nav-bt2">Join Community</a>
+          <Link to="https://linktr.ee/gdsc.adgips" className="nav-bt1" target="_blank">Contact Us</Link>
+          <Link to="https://gdsc.community.dev/dr-akhilesh-das-gupta-institute-of-professional-studies-new-delhi-india/" className="nav-bt2" target="_blank">Join Community</Link>
         </div>
         <a onClick={toggleNav} className="bars">
           <FontAwesomeIcon size="2xl" icon={faBars} />

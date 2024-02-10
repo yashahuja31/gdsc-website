@@ -52,7 +52,7 @@
 .rocketimg {
   height: 150px;
   position: absolute;
-  left: 50%;
+  left: 85%;
   transform: rotate(5deg);
 }
 .feedbackLineDashed {
@@ -145,6 +145,14 @@
 }
 
 .dropdown_three {
+  margin-top: 20px;
+}
+
+.dropdown_four {
+  margin-top: 20px;
+}
+
+.dropdown_five {
   margin-top: 20px;
 }
 

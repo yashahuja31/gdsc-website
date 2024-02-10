@@ -13,7 +13,9 @@
     background-size: cover;
     min-height: 100vh;
 }
-
+.eventImage{
+    cursor: pointer;
+}
 .eventsTimeline .hsrFJz.horizontal {
     top: revert !important;
     bottom: 0 !important;
