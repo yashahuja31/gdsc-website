@@ -17,7 +17,7 @@ import MachineLearning from "./components/resourcedomains/MachineLearning/Machin
 import CyberSecurity from "./components/resourcedomains/CyberSecurity/CyberSecurity.jsx";
 import DataStructures from "./components/resourcedomains/DataStructures/DataStructures.jsx";
 import Miscellaneous from "./components/resourcedomains/Miscellaneous/Miscellaneous.jsx";
-import Resource from "./pages/Resource";
+import Resource from "./pages/Resource/Resource.jsx";
 
 function App() {
   axios.defaults.baseURL =
