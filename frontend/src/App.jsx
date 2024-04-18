@@ -17,6 +17,7 @@ import MachineLearning from "./components/resourcedomains/MachineLearning/Machin
 import CyberSecurity from "./components/resourcedomains/CyberSecurity/CyberSecurity.jsx";
 import DataStructures from "./components/resourcedomains/DataStructures/DataStructures.jsx";
 import Miscellaneous from "./components/resourcedomains/Miscellaneous/Miscellaneous.jsx";
+import Resource from "./pages/Resource";
 
 function App() {
   axios.defaults.baseURL =
@@ -38,6 +39,7 @@ function App() {
           <Route path={"/cybersecurity"} element={<CyberSecurity />} />
           <Route path={"/datastructures"} element={<DataStructures />} />
           <Route path={"/miscellaneous"} element={<Miscellaneous />} />
+          <Route path={"/resources/:resourceId"} element={<Resource />} />
         </Routes>
         <Cloud />
         <Footer />

@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Resource.css";
 
@@ -6,7 +5,7 @@ const Resource = () => {
   const Navigate = useNavigate();
 
   const handleCardClick = (path) => {
-    Navigate(path);
+    Navigate("/resources"+path);
   };
 
   return (
