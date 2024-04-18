@@ -15,7 +15,7 @@ const Resource = () => {
         <div className="container">
           <div
             className="card"
-            onClick={() => handleCardClick("/webdevelopment")}
+            onClick={() => handleCardClick("/web-development")}
           >
             <img
               className="card-img-top"
@@ -30,7 +30,7 @@ const Resource = () => {
           </div>
           <div
             className="card"
-            onClick={() => handleCardClick("/appdevelopment")}
+            onClick={() => handleCardClick("/app-development")}
           >
             <img
               className="card-img-top"
@@ -43,7 +43,7 @@ const Resource = () => {
           </div>
           <div
             className="card"
-            onClick={() => handleCardClick("/datastructures")}
+            onClick={() => handleCardClick("/data-structures")}
           >
             <img
               className="card-img-top"
@@ -56,7 +56,7 @@ const Resource = () => {
           </div>
           <div
             className="card"
-            onClick={() => handleCardClick("/machinelearning")}
+            onClick={() => handleCardClick("/machine-learning")}
           >
             <img
               className="card-img-top"
@@ -69,7 +69,7 @@ const Resource = () => {
           </div>
           <div
             className="card"
-            onClick={() => handleCardClick("/cybersecurity")}
+            onClick={() => handleCardClick("/cyber-security")}
           >
             <img
               className="card-img-top"
