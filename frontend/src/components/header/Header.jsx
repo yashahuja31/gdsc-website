@@ -1,3 +1,4 @@
+import { HashLink } from 'react-router-hash-link';
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -40,9 +41,9 @@ export default function Header() {
           <Link onClick={toggleNav} to="/blogs">
             Blog
           </Link>
-          <a onClick={toggleNav} href="#resources-section">
+          <HashLink onClick={toggleNav} to="/#resources-section">
             Resources
-          </a>
+          </HashLink>
           <a onClick={toggleNav} className="links">
             Contact Us
           </a>

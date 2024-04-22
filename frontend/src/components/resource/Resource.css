@@ -16,43 +16,62 @@
   margin-top: 20px;
   margin-bottom: 40px;
 }
-
-.card-effect {
-  background-image: url("/team/Effect-3.png");
-  align-items: center;
-  justify-content: center;
+@media (max-width: 768px) {
+  .resourceheading {
+    font-size: 40px;
+  }
 }
 
 .red {
   background-color: red;
-  width: 18rem;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
-  text-align: center;
 }
 
 .yellow {
   background-color: yellow;
-  width: 18rem;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
-  text-align: center;
 }
 
 .blue {
   background-color: #007fff;
-  width: 18rem;
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+}
+
+.rcard {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  max-width: 18rem;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  background: white;
+  transition-duration: 200ms;
+}
+
+.rcard:hover {
+  transform: scale(1.05);
+}
+
+.rcard>div:nth-child(1) {
+  padding: 20px;
+}
+.rcard>div:nth-child(1)>img {
+  width: 100%;
+}
+
+.rcard>div:nth-child(2) {
+  flex: 1;
+  padding: 10px;
+  background-image: url("/team/Effect-3.png");
+  background-repeat: repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.rcard>div>h2 {
+  font-size: 25px;
+  font-weight: bold;
   text-align: center;
-}
-
-.card-img-top {
-  object-fit: contain;
-  width: 17rem;
-  margin-bottom: 10px;
-}
-
-h2.card-heading-one {
-  padding-top: 10px;
+  text-wrap: wrap;
 }

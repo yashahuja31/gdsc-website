@@ -5,7 +5,7 @@ const Resource = () => {
   const Navigate = useNavigate();
 
   const handleCardClick = (path) => {
-    Navigate("/resources"+path);
+    Navigate("/resources" + path);
   };
 
   return (
@@ -14,83 +14,73 @@ const Resource = () => {
         <h1 className="resourceheading">Resource Sheet</h1>
         <div className="container">
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/web-development")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/WebDevelopment.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body card-effect red">
-              <h2 className="card-heading card-heading-one ">
-                Web Development
-              </h2>
+            <div>
+            <img src={"/resources/WebDevelopment.png"} alt="Card image cap" />
+            </div>
+            <div className="red">
+              <h2>Web Development</h2>
             </div>
           </div>
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/app-development")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/AppDevelopment.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body card-effect yellow">
-              <h2 className="card-heading card-heading-one">App Development</h2>
+            <div>
+            <img src={"/resources/AppDevelopment.png"} alt="Card image cap" />
+            </div>
+            <div className="yellow">
+              <h2>App Development</h2>
             </div>
           </div>
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/data-structures")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/datastructures.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body card-effect blue">
-              <h2 className="card-heading ">Data Structures and Algorthims</h2>
+            <div>
+
+            <img src={"/resources/datastructures.png"} alt="Card image cap" />
+            </div>
+            <div className="blue">
+              <h2>Data Structures and Algorthims</h2>
             </div>
           </div>
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/machine-learning")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/machinelearning.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body card-effect red">
-              <h2 className="card-heading ">Machine Learning</h2>
+            <div>
+
+            <img src={"/resources/machinelearning.png"} alt="Card image cap" />
+            </div>
+            <div className="red">
+              <h2>Machine Learning</h2>
             </div>
           </div>
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/cyber-security")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/cybersecurity.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body  card-effect yellow">
-              <h2 className="card-heading ">Cyber Security</h2>
+            <div>
+
+            <img src={"/resources/cybersecurity.png"} alt="Card image cap" />
+            </div>
+            <div className="yellow">
+              <h2>Cyber Security</h2>
             </div>
           </div>
           <div
-            className="card"
+            className="rcard"
             onClick={() => handleCardClick("/miscellaneous")}
           >
-            <img
-              className="card-img-top"
-              src={"/resources/miscellaneous.png"}
-              alt="Card image cap"
-            />
-            <div className="card-body card-effect blue">
-              <h2 className="card-heading ">Miscellaneous</h2>
+            <div>
+
+            <img src={"/resources/miscellaneous.png"} alt="Card image cap" />
+            </div>
+            <div className="blue">
+              <h2>Miscellaneous</h2>
             </div>
           </div>
         </div>

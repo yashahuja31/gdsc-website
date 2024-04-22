@@ -19,6 +19,9 @@ const Resource = () => {
       localStorage.setItem("checked", JSON.stringify(checked));
     }
   }, [checked]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [currentResource, setCurrentResource] = useState({
     name: "",
@@ -70,7 +73,6 @@ const Resource = () => {
         <span>Welcome Developers!</span>
       </div>
       <div className="resource-div2">
-        <h4>Frontend:</h4>
         <div className="dropDownContainer">
           {currentResource.resources.map((resource, index) => {
             return (
@@ -87,7 +89,7 @@ const Resource = () => {
                     )
                   }
                 >
-                  <span>{resource.id}</span>
+                  <span>{resource.name}</span>
                   <FontAwesomeIcon
                     style={{
                       height: "25px",
@@ -102,34 +104,39 @@ const Resource = () => {
                 </div>
                 {isDropdownoneVisible === index && (
                   <div className="">
-                    {resource.headings.map((heading, index) => {
+                    {resource.data.map((data, index) => {
                       return (
                         <p className="checkBox" key={index}>
                           <input
                             type="checkbox"
-                            name={heading}
-                            id={heading}
-                            checked={checked.includes(heading)}
+                            name={data.id}
+                            id={data.id}
+                            checked={checked.includes(data.id)}
                             onChange={(e) => {
                               if (e.target.checked) {
-                                setChecked([...checked, heading]);
+                                setChecked([...checked, data.id]);
                               } else {
                                 setChecked(
-                                  checked.filter((item) => item !== heading)
+                                  checked.filter((item) => item !== data.id)
                                 );
                               }
                             }}
                           />
-                          <label htmlFor={heading}>{heading}</label>{" "}
-                          <a
-                            href={resource.links[heading]}
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            {"(" +
-                              "https://www.youtube.com/watch?v=Edsxf_NBFrw" +
-                              ")"}
-                          </a>
+                          <label htmlFor={data.id}>{data.id}</label>{" "}
+                          <div className="flex-a">
+                            {data.links.map((link, index) => {
+                              return (
+                                <a
+                                  key={index}
+                                  href={link.url}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                >
+                                  {link.name}
+                                </a>
+                              );
+                            })}
+                          </div>
                         </p>
                       );
                     })}

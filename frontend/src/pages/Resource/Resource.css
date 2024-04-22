@@ -108,6 +108,7 @@
 .checkBox {
     margin-top: 10px;
     margin-bottom: 5px;
+   text-wrap: wrap;
 }
 .checkBox input {
     margin-right: 10px;
@@ -116,9 +117,16 @@
     font-size: 16px;
     font-weight: 600;
     color: grey;
+    cursor: pointer;
 }
 .checkBox a {
     color: var(--color-green);
+    padding: 0 8px;
+    border-right: 1px solid var(--color-green);
+    cursor: pointer;
+}
+.checkBox a:last-child {
+    border-right: none;
 }
 .checkBox a:hover {
     text-decoration: underline;
@@ -131,4 +139,8 @@
   .resource-div p {
     font-size: 40px;
   }
+}
+.flex-a{
+  display: flex;
+  flex-wrap: wrap;
 }
