@@ -33,12 +33,6 @@ function App() {
           <Route path={"/events"} element={<EventsPage />} />
           <Route path={"/events/:eventId"} element={<EventName />} />
           <Route path={"/blogs"} element={<Blogs />} />
-          <Route path={"/webdevelopment"} element={<WebDevelopment />} />
-          <Route path={"/appdevelopment"} element={<AppDevelopment />} />
-          <Route path={"/machinelearning"} element={<MachineLearning />} />
-          <Route path={"/cybersecurity"} element={<CyberSecurity />} />
-          <Route path={"/datastructures"} element={<DataStructures />} />
-          <Route path={"/miscellaneous"} element={<Miscellaneous />} />
           <Route path={"/resources/:resourceId"} element={<Resource />} />
         </Routes>
         <Cloud />
