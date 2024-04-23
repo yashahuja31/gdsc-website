@@ -735,17 +735,20 @@ const resourcesList = [
                         "id": "Learn the language",
                         "links": [
                             {"name": "C++", "url": "https://www.youtube.com/watch?v=e7sAf4SbS_g"},
-                            {"name": "Java", "url": ""},
-                            {"name": "Python", "url": ""}
+                            {"name": "Java", "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop"},
+                            {"name": "Python", "url": "https://www.youtube.com/watch?v=ERCMXc8x7mc"}
                         ]
                     },
                     {
                         "id": "Strong hold on loops",
-                        "links": []
+                        "links": ["https://takeuforward.org/strivers-a2z-dsa-course/must-do-pattern-problems-before-starting-dsa/"]
                     },
                     {
                         "id": "Basic Mathematics",
-                        "links": []
+                        "links": [
+                            {"name": "Basic Maths by Kunal", "url": "https://www.youtube.com/watch?v=lmSpZ0bjCyQ&list=PL9gnSGHSqcnr_DxHsP7AW9ftq0AtAyYqJ&index=26"},
+                            {"name": "Basic Maths by Striver", "url": "https://www.youtube.com/watch?v=1xNbjMdbjug"}
+                        ]
                     },
                     {
                         "id": "Understanding time and space complexity",
