@@ -33,7 +33,7 @@ const resourcesList = [
                         "id": "Bootstrap",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
+                                "name": "Apna College",
                                 "url": "https://www.youtube.com/watch?v=DUiYVJIVNcA"
                             }
                         ]
@@ -42,7 +42,7 @@ const resourcesList = [
                         "id": "Tailwind CSS",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
+                                "name": "PW Skills Tech",
                                 "url": "https://www.youtube.com/watch?v=MiR1dyW45Uw"
                             }
                         ]
@@ -65,7 +65,7 @@ const resourcesList = [
                         "id": "JQuery",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
+                                "name": "Yahoo Baba",
                                 "url": "https://www.youtube.com/watch?v=wjFfyqEutYE"
                             }
                         ]
@@ -74,8 +74,8 @@ const resourcesList = [
                         "id": "NodeJS",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
-                                "url": "https://www.youtube.com/watch?v=ENrzD9HAZK4"
+                                "name": "WS Cube Tech",
+                                "url": "https://www.youtube.com/watch?v=WjzLVU-aFXI"
                             }
                         ]
                     }
@@ -111,7 +111,7 @@ const resourcesList = [
                         "id": "Basics of TS",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
+                                "name": "Code with Mosh",
                                 "url": "https://www.youtube.com/watch?v=d56mG7DezGs"
                             }
                         ]
@@ -120,7 +120,7 @@ const resourcesList = [
                         "id": "ReactJS with TS",
                         "links": [
                             {
-                                "name": "CodeWithHarry",
+                                "name": "Freecodecamp",
                                 "url": "https://www.youtube.com/watch?v=FJDVKeh7RJI&t=10s"
                             }
                         ]
